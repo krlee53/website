@@ -6,6 +6,16 @@
 
 		$(document).click(function (e) {
 			var container = $("#gtco-offcanvas, .js-gtco-nav-toggle");
+			if ($("#gtco-offcanvas a").is(e.target)){
+				console.log("link clicked");
+				$('.js-gtco-nav-toggle').addClass('');
+
+				if ( $('body').hasClass('offcanvas') ) {
+
+					$('body').removeClass('offcanvas');
+					$('.js-gtco-nav-toggle').removeClass('active');
+				}
+			}
 			if (!container.is(e.target) && container.has(e.target).length === 0) {
 				console.log("click");
 				$('.js-gtco-nav-toggle').addClass('');
@@ -22,24 +32,6 @@
 		});
 
 	};
-	
-	var mobileLinkClick = function() {
-		$(document).click(function (e) {
-			var links = $("#gtco-offcanvas > li");
-			if (links.is(e.target)) {
-				console.log("link clicked");
-				$('.js-gtco-nav-toggle').addClass('');
-
-				if ( $('body').hasClass('offcanvas') ) {
-
-					$('body').removeClass('offcanvas');
-					$('.js-gtco-nav-toggle').removeClass('active');
-
-				}
-			}
-		});
-	}
-
 
 	var offcanvasMenu = function() {
 
@@ -366,7 +358,7 @@
 	
 	$(function(){
 		mobileMenuOutsideClick();
-		mobileLinkClick();
+//		mobileLinkClick();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
@@ -377,10 +369,6 @@
 		loaderPage();
 		counterWayPoint();
 		changeWayPoint();
-	});
-
-	$(document).ready(function () {
-		$("#gtco-offcanvas").find("a:not(.js-gtco-nav-toggle)").off("click").off("mousedown");
 	});
 
 }());
