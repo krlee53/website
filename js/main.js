@@ -5,22 +5,40 @@
 	var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
-	    var container = $("#gtco-offcanvas, .js-gtco-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	    	$('.js-gtco-nav-toggle').addClass('');
+			var container = $("#gtco-offcanvas, .js-gtco-nav-toggle");
+			if (!container.is(e.target) && container.has(e.target).length === 0) {
+				console.log("click");
+				$('.js-gtco-nav-toggle').addClass('');
 
-	    	if ( $('body').hasClass('offcanvas') ) {
+				if ( $('body').hasClass('offcanvas') ) {
 
-    			$('body').removeClass('offcanvas');
-    			$('.js-gtco-nav-toggle').removeClass('active');
-				
-	    	}
-	    
-	    	
-	    }
+					$('body').removeClass('offcanvas');
+					$('.js-gtco-nav-toggle').removeClass('active');
+
+				}
+
+
+			}
 		});
 
 	};
+	
+	var mobileLinkClick = function() {
+		$(document).click(function (e) {
+			var links = $("#gtco-offcanvas > li");
+			if (links.is(e.target)) {
+				console.log("link clicked");
+				$('.js-gtco-nav-toggle').addClass('');
+
+				if ( $('body').hasClass('offcanvas') ) {
+
+					$('body').removeClass('offcanvas');
+					$('.js-gtco-nav-toggle').removeClass('active');
+
+				}
+			}
+		});
+	}
 
 
 	var offcanvasMenu = function() {
@@ -348,6 +366,7 @@
 	
 	$(function(){
 		mobileMenuOutsideClick();
+		mobileLinkClick();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
@@ -360,5 +379,8 @@
 		changeWayPoint();
 	});
 
+	$(document).ready(function () {
+		$("#gtco-offcanvas").find("a:not(.js-gtco-nav-toggle)").off("click").off("mousedown");
+	});
 
 }());
