@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-services {
-  padding: 7em 0;
+  padding: 0 0 7em 0;
 }
 .gtco-services .service {
   margin-left: 10px;
@@ -938,13 +938,26 @@ form label {
 }
 
 .gtco-section {
-  padding: 7em 0;
+  padding: 0;
   clear: both;
   position: relative;
 }
+
+.gtco-products {
+  padding: 3em 0 0 0;
+}
+
+.gtco-about {
+  padding: 3em 0 0 0;
+}
+
+.gtco-footer {
+  padding: 3em 0 0 0;
+}
+
 @media screen and (max-width: 768px) {
   .gtco-section {
-    padding: 3em 0;
+    padding: 1em 0 0 0;
   }
 }
 .gtco-section.border-bottom {

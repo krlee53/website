@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5, h6, figure {
     *display: inline; }
 
 .gtco-services {
-  padding: 7em 0; }
+  padding: 0; }
   .gtco-services .service {
     margin-left: 10px;
     margin-right: 10px;
@@ -760,7 +760,7 @@ form label {
         margin-left: 3px; }
 
 .gtco-section {
-  padding: 7em 0;
+  padding: 0;
   clear: both;
   position: relative; }
   @media screen and (max-width: 768px) {
