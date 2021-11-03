@@ -1015,7 +1015,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   #gtco-offcanvas {
-    display: block;
+    display: inline-block;
   }
 }
 .offcanvas #gtco-offcanvas {
