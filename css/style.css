@@ -21,7 +21,8 @@ body {
   line-height: 1.7;
   color: #777;
   background: #fff;
-  overflow: scroll !important;
+  overflow-y: scroll !important;
+  overflow-x: auto;
 }
 
 #page {
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-nav {
-  position: relative;
+  position: fixed;
   top: 0;
   margin: 0;
   padding: 0;
@@ -552,6 +553,18 @@ h1, h2, h3, h4, h5, h6, figure {
   visibility: visible;
 }
 
+@media screen and (max-width: 768px) {
+	.gtco-products .gtco-item .overlay{
+		opacity: 1;
+		visibility: visible;
+	}
+	.gtco-products .gtco-item .overlay .copy{
+		opacity: 1;
+		visibility: visible;
+		bottom: 0;
+	}
+}
+
 .gtco-testimonial .gtco-testimony {
   float: left;
   width: 100%;
@@ -984,10 +997,10 @@ form label {
   font-size: 18px;
   line-height: 1.7;
   color: #898989;
-  padding-top: 75px;
+  padding-top: 0px;
 }
 .gtco-heading img {
-	width: 75%;
+	width: 50%;
 	height: auto;
 	vertical-align: middle;
 }
@@ -1135,7 +1148,7 @@ form label {
   border-bottom: none !important;
 }
 .gtco-nav-toggle i {
-  position: relative;
+  position: fixed;
   display: inline-block;
   width: 25px;
   height: 2px;

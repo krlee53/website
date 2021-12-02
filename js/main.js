@@ -39,8 +39,6 @@
 		$('#page').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle "><i></i></a>');
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#gtco-offcanvas').append(clone1);
-//		var clone2 = $('.menu-2 > ul').clone();
-//		$('#gtco-offcanvas').append(clone2);
 
 		$('#gtco-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
 		$('#gtco-offcanvas')
@@ -311,7 +309,7 @@
 
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
-			}, 500, 'easeInOutExpo');
+			}, 100, 'easeInOutExpo');
 			
 			return false;
 		});
@@ -358,7 +356,6 @@
 	
 	$(function(){
 		mobileMenuOutsideClick();
-//		mobileLinkClick();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();

@@ -107,12 +107,12 @@
 		<div class="gtco-section gtco-about">
 			<div id="about"></div>
 			<div class="gtco-container">
-				<div class="row row-pb-sm">
-					<div class="col-md-3 col-md-offset-0 gtco-heading text-right">
+				<div class="row row-pb-sm" id="about-row">
+					<div class="col-md-4 gtco-heading text-center">
 						<img alt="headshot" src="images/headshot.jpg"/>
 					</div>
-					<div class="col-md-8 col-md-offset-0 gtco-heading text-left">
-						<p>Hi, my name is Kristin. Welcome to my website! I am currently a senior at Cornell University majoring in CS with a minor in ECE. Feel free to reach out and contact me with any questions/inquiries!</p>
+					<div class="col-md-7 col-md-offset-0 gtco-heading text-left">
+						<p>Hi, my name is Kristin. Welcome to my website! I am currently a senior at Cornell University majoring in CS with a minor in ECE. I will be graduating in May 2022 with my B.S. and M.Eng. Feel free to reach out and contact me with any questions/inquiries!</p>
 					</div>
 				</div>
 			</div>
@@ -239,18 +239,18 @@
  						</a>
 					</div>
 					<div class="col-md-8 col-md-offset-2 gtco-footer-subscribe">
-						<form action="#">
+						<form method="post" action="email.php">
 							<div class="form-group">
 								<label for="name">Name</label>
-								<input type="text" class="form-control" id="name">
+								<input type="text" class="form-control" id="name" name="name">
 							</div>
 							<div class="form-group">
 								<label for="name">Email</label>
-								<input type="text" class="form-control" id="email">
+								<input type="text" class="form-control" id="email" name="email">
 							</div>
 							<div class="form-group">
 								<label for="message"></label>
-								<textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
 							</div>
 							<div class="form-group">
 								<input type="submit" class="btn btn btn-special" value="Send Message">
